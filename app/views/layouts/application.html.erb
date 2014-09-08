@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="content">
+		<h1><span class="hr">watch</span>this!</h1>
+		<ul id="top">
+			<li><a class="current" href="#">Home</a></li>
+			<li><a href="#">New Stuff</a></li>
+			<li><a href="#">Interviews</a></li>
+			<li><a href="#">Startups</a></li>
+		</ul>
+		<div id="intro">
+			<p>Phasellus augue diam, <a href="#">vestibulum non</a>, iaculis eget, tristique sed, lectus. Sed pede. Nullam egestas ante a mauris. Aliquam metus turpis, luctus ac, sagittis eget, <a href="#">elementum      tincidunt</a>, massa.</p>
+		</div>
+		<div id="left">
+            <%= yield %>
+        </div>
+		<div id="right">
+			<h3>Popular Stuff</h3>
+            <% 6.times do %>
+              <%= image_tag "site.gif", alt: "site" %>
+            <% end %>
+			<br /><br />
+			<h3>Latest Comments</h3>
+			<ul>
+				<li><a href="#">In cursus rhoncus ante. Quisque...</a></li>
+				<li><a href="#">Mauris magna sem, pellentesque sit am...</a></li>
+				<li><a href="#">Nullam egestas ante a mauris. Aliqu...</a></li>
+				<li><a href="#">Etiam blandit ultricies nisl. Nullam...</a></li>
+				<li><a href="#">In cursus rhoncus ante. Quisque...</a></li>
+				<li><a href="#">Mauris magna sem, pellentesque sit am...</a></li>
+				<li><a href="#">Nullam egestas ante a mauris. Aliqu...</a></li>
+			</ul>
+		</div>
+		<div id="footer">
+			<p>Design: Luka Cvrk, <a title="Awsome Web Templates" href="http://www.solucija.com/">Solucija</a></p>
+		</div>
+	</div>
+</body>
+</html>
